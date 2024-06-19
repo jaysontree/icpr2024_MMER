@@ -39,7 +39,7 @@ Repo for Multi-line Math Expression Recognitions Competition
 
 目前统计字典总数为：337，分布如下：
 
-<img src="img\1.png" alt="1" style="zoom: 50%;" />
+<img src="img\1.png" alt="1" style="zoom: 33%;" />
 
 可以看出字典分布不均衡，长度最多为100长度左右。目前设置设置图片输入大小为$560\times560$​，最大长度为1024。
 
