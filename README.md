@@ -4,7 +4,11 @@ Repo for Multi-line Math Expression Recognitions Competition
 
 ## 一、数据分析
 
-图片分析：
+目前训练集总数为15000张图片，按照9：1划分数据集，详情见`script/preprocess.ipynb`
+
+统计训练集相关详情如下：
+
+* 图片分析：
 
 ```bash
 ===================>H的参数：
@@ -19,7 +23,7 @@ Repo for Multi-line Math Expression Recognitions Competition
 最小值: 181
 ```
 
-标签分析：
+* 标签分析：
 
 ```bash
 ===================>标签长度参数：
@@ -29,11 +33,19 @@ Repo for Multi-line Math Expression Recognitions Competition
 最小值: 13
 ```
 
+目前标签长度分布如下：
 
+<img src="img\2.png" alt="2" style="zoom:72%;" />
+
+目前统计字典总数为：337，分布如下：
+
+<img src="img\1.png" alt="1" style="zoom: 50%;" />
+
+可以看出字典分布不均衡，长度最多为100长度左右。目前设置设置图片输入大小为$560\times560$​，最大长度为1024。
 
 ## 二、模型选择
 
-目前主流的公式识别模型架构为encoder-decoder，从2022到2024发展的模型如下：
+目前主流的公式识别模型架构为encoder-decoder，从2021到2024发展的模型如下：
 
 | 模型  | HME100K | 时间 |
 | ----- | ------- | ---- |
@@ -43,7 +55,14 @@ Repo for Multi-line Math Expression Recognitions Competition
 | LAST  | ——      | 2023 |
 | ICAL  | 69.25   | 2024 |
 
-当然也有Nougat(2023)做过相关工作
+当然也有Nougat(2023)做过相关工作。
 
-目前主要测试了CAN、CoMER、ICAL、Nougat，等模型，测试baseline结果如下：
+目前主要测试了**CAN**、**CoMER**、**ICAL**、**Nougat**，等模型，测试baseline结果如下：
+
+|        | ExpRate | TokenAcc |
+| ------ | ------- | -------- |
+| CAN    |         |          |
+| CoMER  |         |          |
+| ICAL   |         |          |
+| Nougat |         |          |
 
