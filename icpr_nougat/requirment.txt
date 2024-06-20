@@ -1,0 +1,26 @@
+transformers==4.34
+accelerate
+munch
+albumentations
+imagesize
+Levenshtein
+timm
+anyconfig
+sentencepiece==0.1.99
+optimum==1.17.1
+onnx-simplifier
+nvidia-pyindex
+onnx_graphsurgeon
+logger
+onnxmltools
+onnxconverter_common
+polygraphy
+colored
+onnx 
+onnxruntime
+pycuda
+
+# /usr/local/lib/python3.8/dist-packages/transformers/models/vision_encoder_decoder/modeling_vision_encoder_decoder.py
+# add_pooling_layer=False
+
+# /usr/local/nsight-systems/2021.3.1

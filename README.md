@@ -64,5 +64,5 @@ Repo for Multi-line Math Expression Recognitions Competition
 | CAN    |         |          |
 | CoMER  |         |          |
 | ICAL   |         |          |
-| Nougat |         |          |
+| Nougat | 0.652   | 0.9857   |
 

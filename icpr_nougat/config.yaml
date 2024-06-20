@@ -1,0 +1,62 @@
+name: nougat-small
+device:
+  allow_tf32: true
+model:
+  type: VisionEncoderDecoderModel
+  pretrained_model_name_or_path: ./cust-data/weights
+  max_length: 1024
+  image_size: [560, 560]  # height, width
+  quantization_type: ''
+  model_path: ~
+  mixed_precision: "fp16" # "["no", "fp16", "bf16]
+  processor_args:
+    img_processor_args:
+      do_crop_margin: false
+trainer:
+  start_global_step: -1
+  resume_flag: false
+  use_ema: false
+  ema_include: []
+  # gradient configuration
+  grad_accumulate: 1 # gradient accumulation
+  random_seed: ~
+  grad_clip: 3.0
+  optimizer:
+    optimizer_type: "adamw"
+    lr: 2.0e-05
+    # layer_decay: 0.75
+    weight_decay: 0.05
+    beta1: 0.9
+    beta2: 0.98
+    eps: 1.0e-6
+  scheduler:
+    scheduler_type: "cosine"
+    warmup_epochs: 0
+    warmup_steps: 500
+  epochs: 20
+  # tensorboard configuration
+  save_dir: ./nougat_latex
+  tensorboard_dir: ./nougat_latex/tensorboard
+  # display configuration
+  save_epoch_freq: 1
+  save_step_freq: 1000
+  print_freq: 20
+datasets:
+  train:
+    dataset:
+      type: NougatDataset
+      data_root:
+        - /hy-tmp/data/icpr_data
+      equations: train.txt
+    num_workers: 10
+    batch_size: 8 #32
+    shuffle: true
+    collate_fn:
+      type: NougatPadFixSizeCollectFn
+      debug: true
+  eval:
+    dataset:
+      data_root:
+      - /hy-tmp/data/icpr_data
+      equations: val.txt
+    shuffle: false
