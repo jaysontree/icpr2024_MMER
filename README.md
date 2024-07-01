@@ -62,7 +62,7 @@ Repo for Multi-line Math Expression Recognitions Competition
 |        | ExpRate | TokenAcc |
 | ------ | ------- | -------- |
 | CAN    | 0.34    | 0.79     |
-| CoMER  |         |          |
+| CoMER  | 0.62    | 0.95     |
 | ICAL   |         |          |
 | Nougat | 0.66    | 0.98     |
 
