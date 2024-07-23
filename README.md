@@ -1,6 +1,10 @@
+简体中文 | [English](README_en.md)
+
 # icpr2024_MMER
 
-Repo for Multi-line Math Expression Recognitions Competition
+ICPR 2024多行公式识别比赛 第三名方案
+
+主要贡献者为：金秋 @kingqiuol
 
 ## 一、数据分析
 
