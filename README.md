@@ -4,7 +4,7 @@
 
 ICPR 2024多行公式识别比赛 第三名方案
 
-主要贡献者为：金秋 @kingqiuol
+主要贡献者为：金秋 [@kingqiuol](https://github.com/kingqiuol)
 
 ## 一、数据分析
 
