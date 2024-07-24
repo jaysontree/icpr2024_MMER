@@ -57,7 +57,7 @@ Label Dict distribution:
 
 ```
 Training setup:
-- Train:val = 9:1 # refer to script/preprocess.ipynb
+- Train:val = 0.95:0.05 # refer to script/preprocess.ipynb
 ```
 ### Implementation Results
 |        | ExpRate | TokenAcc |
